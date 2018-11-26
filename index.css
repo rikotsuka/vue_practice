@@ -1,0 +1,20 @@
+[v-cloak] {
+	display: none;
+}
+.todo-head-enter-active {
+	transition: 1s;
+}
+.todo-head-enter {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+.todo-item {
+	transition: 1s;
+}
+.todo-item-enter, .todo-item-leave-to {
+	opacity: 0;
+	transform: translateX(200px);
+}
+.todo-item-leave-active {
+	position: absolute;
+}
