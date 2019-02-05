@@ -12,14 +12,14 @@
 </head>
 <body>
 <div id="app">
-<img src="ひよこ３.png"></img><p>
-<img v-bind:src="fileName">指定</img>
+<p style="background-color:aqua;">背景色を指定</p>
+<p v-bind:style="{backgroundColor:myBackColor}">指定</p>
 </div>
 <script>
 new Vue({
   el:'#app',
   data:{
-    fileName:'ひよこ３.png'
+    myBackColor:'aqua'
   }
 })
 </script>
