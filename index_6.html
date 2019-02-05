@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="my-component.css">
+</head>
+<body>
+<div id="app">
+<div style="font-size:200%">文字数カウント</div>
+<textarea v-model="myText"></textarea>
+<p>文章は[{{myText}}]です</p>
+<p>文字数は[{{myText.length}}]です</p>
+</p>
+</div>
+<script>
+new Vue({
+  el:'#app',
+  data:{
+    myText:''
+  }
+})
+</script>
+</body>
+</html>
