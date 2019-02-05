@@ -12,13 +12,14 @@
 </head>
 <body>
 <div id="app">
-<p>{{myText}}</p>
+<img src="ひよこ３.png"></img><p>
+<img v-bind:src="fileName">指定</img>
 </div>
 <script>
 new Vue({
   el:'#app',
   data:{
-    myText:"やっほーい！！"
+    fileName:'ひよこ３.png'
   }
 })
 </script>
