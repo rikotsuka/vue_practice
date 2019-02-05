@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+<lavel><input type="checkbox"value="red"v-model="myChecks">
+赤</lavel>
+<lavel><input type="checkbox"value="blue"v-model="myChecks">
+青</lavel>
+<lavel><input type="checkbox"value="yellow"v-model="myChecks">
+黄</lavel>
+選択したのは{{myChecks}}
+</div>
+<script>
+new Vue({
+  el:'#app',
+  data:{
+    myChecks:[]
+  }
+})
+</script>
+</body>
+</html>
