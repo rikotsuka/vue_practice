@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <!--<script src="./my-component.js"></script>
+    <style src="./my-component.css"></style>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+</head>
+<body>
+<div id="app">
+<input v-model="myName"placeholder="お名前">
+<p>私の名前は{{myName}}です</p>
+</div>
+<script>
+new Vue({
+  el:'#app',
+  data:{
+    myName:''
+  }
+})
+</script>
+</body>
+</html>
