@@ -5,25 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <!--<script src="./my-component.js"></script>
     <style src="./my-component.css"></style>-->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 </head>
+<body>
 <div id="app">
-<p>
-  <input type="text"
-    placeholder="TODOを入力しましょう！"
-    v-model="newItemTitle"
-    v-on:keyup.enter="addTodo(newItemTitle)"></p>
-  <ul>
-    <li v-for="item in items">
-      <label v-bind:class="{ done: item.isChecked }">
-        <input type="checkbox" v-model="item.isChecked"> {{ item.title }}
-      </label>
-    </li>
-  </ul>
-  <button v-on:click="deleteTodo()">チェック済みの項目を削除する</button>
+<p>{{myText}}</p>
 </div>
+<script>
+new Vue({
+  el:'#app',
+  data:{
+    myText:"やっほーい！！"
+  }
+})
+</script>
 </body>
 </html>
