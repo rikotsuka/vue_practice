@@ -10,27 +10,25 @@
 
 <body>
 <style>
-.v-enter-active, .v-leave-active {
-  transition: opacity 1s;
+.v-enter-active,.v-leave-active{
+    transition:0.5s;
 }
-/* 見えなくなるときの透明度 */
-.v-enter, .v-leave-to {
-  opacity: 0;
+.v-enter,.v-leave-to{
+    opacity: 0;
+    transform:translateY(20px);
 }
 </style>
 <div id="app">
-  <p><button v-on:click="show=!show">切り替え</button></p>
-  <transition>
-    <div v-show="show">
-    透明
-    </div>
+    <lavel><input type="checkbox"v-model="isOK">切り替える</lavel>
+    <transition>
+      <p v-if="isOK">表示非表示のアニメ</p>
   </transition>
 </div>
 <script>
 new Vue({
   el: '#app',
   data: {
-    show: true
+isOK: false
   }
 })
 </script>
