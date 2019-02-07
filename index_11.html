@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+</head>
+
+<body>
+<style>
+.v-enter-active,.v-leave-active{
+    transition:0.5s;
+}
+.v-enter,.v-leave-to{
+    opacity: 0;
+    transform:translateY(20px);
+}
+</style>
+<div id="app">
+    <lavel><input type="checkbox"v-model="isOK">切り替える</lavel>
+    <transition>
+      <p v-if="isOK">表示非表示のアニメ</p>
+  </transition>
+</div>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+isOK: false
+  }
+})
+</script>
+</body>
+</html>

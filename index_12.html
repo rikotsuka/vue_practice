@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>ボタンを押してリストが増減するとき、アニメーションする例</h2>
+		<div id="app">
+			<transition-group>
+				<li v-for="item in dataArray" v-bind:key="item"> {{item}}</li>
+			</transition-group>
+			<label><input v-model="addItem" placeholder="追加するリスト"></label>
+			<button v-on:click="addList">追加</button><p>
+			<button v-on:click="removeLast">最後の1つを削除</button>
+		</div>
+		
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					dataArray:['桃太郎','かぐや姫','かちかち山'],
+					addItem: ''
+				},
+				methods: {
+					addList: function() {
+						this.dataArray.push(this.addItem);
+						this.addItem = '';
+					},
+					removeLast: function() {
+						var lastIdx = this.dataArray.length - 1;
+						this.dataArray.splice(lastIdx, 1);
+					}
+				}
+			})
+		</script>
+		
+		<style>
+			/* 現れている最中と、消えている最中は、0.5秒 */
+			.v-enter-active, .v-leave-active {
+				transition: 0.5s;
+			}
+			/* 現れる前の状態と、消えたときの状態は、透明度0で、右へ50移動*/
+			.v-enter, .v-leave-to {
+				opacity: 0;
+				transform: translateX(50px)
+			}
+		</style>
+	</body>
+</html>
